@@ -1,38 +1,52 @@
-# sv
+# GitHub Master
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+GitHub Master is a web application that allows you to search for your GitHub profile and provides insights into your followers, following, and unfollowers.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Know your followers list.
+- Know those who you follow but don't follow you back.
+- Unfollow people.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Stats
 
-# create a new project in my-app
-npx sv create my-app
+### Installation and Running Locally
+
+To install the dependencies and run the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone <repository-url>
+   cd GitHub_Master
+   ```
+
+2. **Install the dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+3. **Run the project locally:**
+
+   ```sh
+   npm run dev
+   ```
+
+4. **Open your browser and navigate to:**
+   ```
+   http://localhost:5173
+   ```
+
+This will start the development server and you should be able to see the project running locally.
+
+The application displays your GitHub stats, including the number of followers, following, and unfollowers.
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your `.env` file:
+
+```.env
+	VITE_API_USERNAME="your_github_username"
+	VITE_API_BASE="your_api_url"
 ```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
