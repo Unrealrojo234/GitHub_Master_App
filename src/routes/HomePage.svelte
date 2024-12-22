@@ -74,7 +74,12 @@
 			</li>
 		</ul>
 	</div>
-	<img src="dancing.gif" alt="Dancing anime girl" class="img-fluid" />
+	<img
+		src="https://i.pinimg.com/originals/01/81/5c/01815cce962b285887dd00aeac220784.gif"
+		loading="lazy"
+		alt="Dancing anime girl"
+		class="img-fluid"
+	/>
 	<br /><br />
 	<span>Made by <a href="https://github.com/Unrealrojo234/" target="_blank">@Unrealrojo234</a></span
 	>
