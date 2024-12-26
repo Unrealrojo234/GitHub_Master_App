@@ -33,7 +33,7 @@
 	//Unfollow all
 	const unfollowAll = () => {
 		fetch(`${api}/unfollow_all_non_followers`)
-			.then((res) => res.json())
+			.then((res) => res)
 			.then((data) => {
 				console.log(data);
 				unfollowers = [];
