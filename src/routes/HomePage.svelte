@@ -75,7 +75,7 @@
 		</ul>
 	</div>
 	<img
-		src="https://i.pinimg.com/originals/01/81/5c/01815cce962b285887dd00aeac220784.gif"
+		src="https://i.pinimg.com/originals/e1/6e/ee/e16eee15cb361d1582dcbd8939e3f710.gif"
 		loading="lazy"
 		alt="Dancing anime girl"
 		class="img-fluid"
