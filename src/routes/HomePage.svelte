@@ -7,6 +7,10 @@
 	let following = $state(null);
 	let unfollowers = $state(null);
 
+	let avatar_url = $state(null);
+	let repos = $state(null);
+	let bio = $state(null);
+
 	//Function to count the number of followers, following and unfollowers
 	const numbers = (data) => {
 		let count = 0;
@@ -23,10 +27,24 @@
 		fetch(`${api}/status`)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
 				followers = numbers(data.followers);
 				following = numbers(data.following);
 				unfollowers = numbers(data.not_followed_back);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	});
+
+	//Getting user info
+	$effect(() => {
+		fetch(`https://api.github.com/users/${username}`)
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				avatar_url = data.avatar_url;
+				repos = data.public_repos;
+				bio = data.bio;
 			})
 			.catch((err) => {
 				console.log(err);
@@ -46,6 +64,22 @@
 		<li>Know those who you follow but don't follow you back.</li>
 		<li>Unfollowing people.</li>
 	</ul>
+	<div>
+		<img
+			src={avatar_url}
+			id="profile-pic"
+			alt="Avatar"
+			class="img-fluid"
+			style="border-radius: 50%;"
+		/>
+		<p>
+			<span style="color: cyan;">{username}</span> has <span style="color: lime;">{repos}</span> public
+			repositories.
+		</p>
+		<p>
+			<span style="color: cyan;">{username}</span> bio: <span style="color: lime;">{bio}</span>
+		</p>
+	</div>
 	<h3>Stats</h3>
 	<div id="stats">
 		<img
@@ -64,13 +98,15 @@
 	<div>
 		<ul>
 			<li>
-				<p>Followers 🤩: <span style="color: lime;">{followers}</span></p>
+				<p><a href="Followers">Followers </a> 🤩: <span style="color: lime;">{followers}</span></p>
 			</li>
 			<li>
-				<p>Following 🙂‍↕️: <span style="color: cyan;">{following}</span></p>
+				<p><a href="Following">Following</a> 🙂‍↕️: <span style="color: cyan;">{following}</span></p>
 			</li>
 			<li>
-				<p>Unfollowers 😩: <span style="color: red;">{unfollowers}</span></p>
+				<p>
+					<a href="Unfollowers">Unfollowers </a> 😩: <span style="color: red;">{unfollowers}</span>
+				</p>
 			</li>
 		</ul>
 	</div>
@@ -86,6 +122,9 @@
 </main>
 
 <style>
+	#profile-pic {
+		max-width: 12rem;
+	}
 	main {
 		max-width: 48rem;
 		display: block;
