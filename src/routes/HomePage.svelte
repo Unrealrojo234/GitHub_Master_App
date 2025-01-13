@@ -84,13 +84,13 @@
 	<div id="stats">
 		<img
 			class="img-fluid"
-			src="https://github-readme-stats-mu-eight-72.vercel.app/api?username={username}&show_icons=true&theme=merko"
+			src="https://github-readme-stats.vercel.app/api?username={username}&show_icons=true&theme=merko"
 			alt="stats"
 		/>
 
 		<img
 			class="img-fluid"
-			src="https://github-readme-stats-mu-eight-72.vercel.app/api/top-langs/?username={username}&layout=donut&theme=merko"
+			src="https://github-readme-stats.vercel.app/api/top-langs/?username={username}&layout=donut&theme=merko"
 			alt="stats"
 		/>
 	</div>
