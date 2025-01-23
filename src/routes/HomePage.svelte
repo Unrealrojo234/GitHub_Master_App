@@ -90,8 +90,14 @@
 
 		<img
 			class="img-fluid"
+			src="https://streak-stats.demolab.com/?user={username}&theme=merko"
+			alt="streak"
+		/>
+
+		<img
+			class="img-fluid"
 			src="https://github-readme-stats.vercel.app/api/top-langs/?username={username}&layout=donut&theme=merko"
-			alt="stats"
+			alt="top-languages"
 		/>
 	</div>
 	<br />
